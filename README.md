@@ -13,7 +13,7 @@ Remove movies from the favorites list.
 Getting Started
 To run the Mini IMDB Clone App locally, follow these steps:
 
-Clone the repository to your local machine: https://github.com/satyam-769/imdb-clone-vanilla-javascript.git
+Clone the repository to your local machine: https://github.com/satyam-769/mini-imdb-clone-vanilla-javascript.git
 cd mini-imdb-clone
 
 Open the index.html file in your web browser to view the app.
