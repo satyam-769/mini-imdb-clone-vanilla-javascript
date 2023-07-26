@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IMDB Clone | Favourite Movie</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body onload="fetchFavouriteMovies()">
+  <section>
+    <div class="container hero-image">
+      <div class="favourite" style="display: unset; background: none"></div>
+      <div class="search">
+        <input class="search-input" type="text" id="searchText" placeholder="Search your movie...">
+        <div class="search-icon mr-0"><img class="search-icon-img" src="/search-icon.svg" alt=""></div>
+      </div>
+      <div class="container">
+        <div class="back-btn" id="movie-details">
+          <a href="index.html">Back</a>
+        </div>
+      </div>
+    </div>
+    <h1 class="heading">Your Favourite Movies</h1>
+  </section>
+  <!-- <section>
+    <div class="empty-page" id="searchResults">Your search resault is display here.......</div>
+  </section> -->
+  <section>
+    <div class="fav-movie-cards movie-container-main"></div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
