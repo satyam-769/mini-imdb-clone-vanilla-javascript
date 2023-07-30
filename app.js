@@ -1,4 +1,4 @@
-// const API = "http://www.omdbapi.com/?i=tt3896198&apikey=6a0bcf92";
+// const API = "https://www.omdbapi.com/?i=tt3896198&apikey=6a0bcf92";
 const API_KEY = "6a0bcf92";
 var searchInputText = document.getElementById('searchText');
 
@@ -8,7 +8,7 @@ searchInputText.addEventListener('input', fetchMovies);
 // Helper routine to call get fetchMovie API
 async function fetchMovies(){
   let trimValue = searchInputText.value.trim();
-  const url = `http://www.omdbapi.com/?s=${trimValue}&page=1&apikey=${API_KEY}`;
+  const url = `https://www.omdbapi.com/?s=${trimValue}&page=1&apikey=${API_KEY}`;
 
   // get API call using using fetch method and convert response into json format
   const data = await fetch(url).then(res => res.json())
@@ -45,7 +45,7 @@ async function fetchMovieDetails(){
   // Find movie id from URL
   var urlQueryParams = new URLSearchParams(window.location.search)
   var movieId = urlQueryParams.get('id');
-  const url = `http://www.omdbapi.com/?i=${movieId}&page=1&apikey=${API_KEY}`;
+  const url = `https://www.omdbapi.com/?i=${movieId}&page=1&apikey=${API_KEY}`;
 
   // if response is true call the showMovieList method to show the movie list
   const data = await fetch(url).then(res => res.json())
@@ -142,7 +142,7 @@ async function fetchFavouriteMovies(){
     Object.keys(localStorage).map(async (key) => {
       const movieId = localStorage.getItem(key);
       if(movieId){
-        const url = `http://www.omdbapi.com/?i=${movieId}&page=1&apikey=${API_KEY}`;
+        const url = `https://www.omdbapi.com/?i=${movieId}&page=1&apikey=${API_KEY}`;
         const data = await fetch(url).then(res => res.json())
         console.log('fav_movie_data===',data)
         results += `
